@@ -1,0 +1,68 @@
+/* Hover zoom magnifier */
+.img-zoom-container {
+  overflow: hidden;
+}
+
+.img-zoom {
+  transition: transform 0.4s ease;
+}
+
+.pdf-page-card:hover .img-zoom {
+  transform: scale(1.12);
+}
+
+/* Full screen preview modal */
+.img-preview-modal .modal-content {
+  background: rgba(0, 0, 0, 0.85);
+  border: none;
+  border-radius: 0;
+}
+
+.modal-full-img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+/* Pinterest Masonry Layout */
+.masonry {
+  columns: 4;
+  column-gap: 14px;
+}
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 14px;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.25s ease-in-out;
+}
+.masonry-img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+.masonry-item:hover .masonry-img {
+  transform: scale(1.07);
+}
+
+/* Responsive */
+@media (max-width: 992px) { .masonry { columns: 3; } }
+@media (max-width: 768px) { .masonry { columns: 2; } }
+@media (max-width: 480px) { .masonry { columns: 1; } }
+
+/* Modal full-screen view */
+.img-preview-modal .modal-content {
+  background: rgba(0,0,0,0.9);
+  border: none;
+  border-radius: 0;
+}
+.modal-full-img {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+}

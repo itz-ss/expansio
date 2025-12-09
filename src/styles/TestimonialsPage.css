@@ -1,0 +1,241 @@
+/* -------- Page -------- */
+.media-page {
+  padding: 30px 18px;
+  font-family: "Poppins", sans-serif;
+  background: transparent;
+}
+.media-header h1 {
+  text-align: center;
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.media-header p {
+  text-align: center;
+  color: #666;
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+/* -------- Search -------- */
+.event-search-bar {
+  max-width: 650px;
+  margin: 26px auto 35px;
+}
+.event-search-bar input {
+  width: 100%;
+  padding: 13px 18px;
+  border-radius: 12px;
+  border: 1px solid #cfd3de;
+  font-size: 15px;
+  outline: none;
+}
+.event-search-bar input:focus {
+  border-color: #0078ff;
+  box-shadow: 0 0 0 3px rgba(0, 120, 255, 0.18);
+}
+
+/* -------- GRID -------- */
+.events-grid {
+  display: grid;
+  gap: 24px;
+  justify-content: center;
+}
+@media (min-width: 1400px) {
+  .events-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .events-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 900px) and (max-width: 1199px) {
+  .events-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .events-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 599px) {
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* -------- Cards -------- */
+.event-card {
+  /* background: #ffffff; */
+  border-radius: 14px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* box-shadow: 0px 6px 22px rgba(0, 0, 0, 0.08); */
+  overflow: hidden;
+}
+.event-card:hover {
+  transform: translateY(-6px);
+  /* box-shadow: 0px 10px 28px rgba(0, 0, 0, 0.13); */
+}
+
+.event-thumb {
+  width: 100%;
+  height: 170px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.event-video-icon {
+  width: 100%;
+  height: 170px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1b1b1b;
+  font-size: 48px;
+  color: white;
+}
+
+.event-card-title {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #1d1d1d;
+}
+
+/* -------- Load More -------- */
+.media-loadmore-wrapper {
+  text-align: center;
+  margin: 28px auto;
+}
+.media-loadmore {
+  padding: 10px 26px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #0078ff;
+  color: white;
+  font-size: 15px;
+  transition: 0.3s;
+}
+.media-loadmore:hover {
+  background: #005bd1;
+}
+
+/* -------- Lightbox Overlay -------- */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  padding: 20px;
+}
+
+/* Close button */
+.lightbox-close {
+  position: absolute;
+  top: 30px;
+  right: 38px;
+  font-size: 34px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Prev / Next */
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  font-size: 32px;
+  /* background: rgba(0, 0, 0, 0.55); */
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.lightbox-prev {
+  left: 25px;
+}
+.lightbox-next {
+  right: 25px;
+}
+
+/* -------- WRAPPER -------- */
+.lightbox-media-wrapper {
+  max-width: 92vw;
+  max-height: 82vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* -------- FIXED SIZE FOR VIDEO + IMAGES -------- */
+.lightbox-media {
+  max-width: 90vw;
+  max-height: 75vh;
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+/* -------- YOUTUBE & SHORTS FIXED SIZING -------- */
+.lightbox-video-wrapper {
+  width: 90vw;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  max-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 14px;
+  object-fit: contain;
+}
+
+/* -------- Info -------- */
+.lightbox-info {
+  text-align: center;
+  color: white;
+  margin-bottom: 12px;
+}
+.lightbox-info h2 {
+  font-size: 1.45rem;
+  margin-bottom: 2px;
+}
+.lightbox-info p {
+  font-size: 1rem;
+  color: #e6e6e6;
+}
+
+/* -------- Description -------- */
+.lightbox-description {
+  margin-top: 16px;
+  max-width: 650px;
+  color: white;
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: center;
+  padding-bottom: 30px;
+}
+

@@ -1,0 +1,44 @@
+.doctors-list {
+  font-family: "Poppins", sans-serif;
+}
+
+.doctors-title {
+  font-weight: 700;
+  color: #0077ff;
+}
+
+.doctor-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doctor-card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.doctor-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border: 4px solid #0077ff25;
+}
+
+.doctor-name {
+  color: #222;
+  font-weight: 600;
+}
+
+.doctor-btn {
+  font-weight: 500;
+  border-radius: 8px;
+  background: #0077ff;
+  border: none;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+}
+
+.doctor-btn:hover {
+  background: #0056b3;
+}

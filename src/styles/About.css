@@ -1,0 +1,187 @@
+/* ==========================================================
+   🌐 ABOUT PAGE STYLES (No Top Banner)
+   Focus on clean layout with headings + alternating sections
+   ========================================================== */
+
+/* ---------- Main Container ---------- */
+.about-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 15px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ---------- Doctor Heading Section ---------- */
+.about-heading {
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #0077ff;
+  letter-spacing: 0.5px;
+}
+
+.doctor-title {
+  color: #555;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* ---------- Each Content Section ---------- */
+.about-section {
+  margin: 10px 0;
+}
+
+/* Alternate layout for even-numbered sections */
+.about-section.reverse .image-col {
+  order: 2;
+}
+.about-section.reverse .text-col {
+  order: 1;
+}
+
+/* ---------- Section Images ---------- */
+.about-image {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+/* ---------- Text Column ---------- */
+.text-col {
+  padding: 20px;
+}
+
+.text-col h3 {
+  color: #0077ff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.text-col p {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.text-col ul {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.text-col li {
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 992px) {
+  .about-container {
+    padding: 40px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack order back to normal on mobile */
+  .about-section.reverse .image-col,
+  .about-section.reverse .text-col {
+    order: unset;
+  }
+
+  .about-image {
+    margin-bottom: 20px;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-heading {
+    font-size: 1.6rem;
+  }
+
+  .doctor-title {
+    font-size: 1rem;
+  }
+
+  .text-col p,
+  .text-col li {
+    font-size: 14px;
+  }
+
+  .about-container {
+    padding: 30px 10px;
+  }
+}
+
+.education-table {
+  background-color: transparent !important;
+}
+.education-table th,
+.education-table td {
+  background-color: transparent !important;
+}
+
+/* 🔥 Force table & children transparent (removes Bootstrap white background) */
+.about-table,
+.about-table * {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Remove borders and hover glow */
+.about-table tr,
+.about-table td,
+.about-table tbody {
+  border: none !important;
+}
+
+/* Improve spacing */
+.about-table td {
+  padding: 8px 0 !important;
+  font-size: 15px;
+  color: #444;
+}
+
+/* Make left column (degree) bold */
+.about-table td:first-child {
+  font-weight: 600;
+  width: 38%;
+}
+
+/* Highlight special entries */
+.highlight-text {
+  font-weight: 600;
+  color: #0077ff;
+}
+
+/* Small star badge */
+.badge-highlight {
+  margin-left: 4px;
+  font-size: 16px;
+}
+
+.animate-highlight {
+  font-weight: 600;
+  display: inline-block;
+  animation: popPulse 2s infinite ease-in-out;
+  color: #003366;
+}
+
+@keyframes popPulse {
+  0% { transform: scale(1); color: #003366; }
+  50% { transform: scale(1.05); color: #007bff; }
+  100% { transform: scale(1); color: #003366; }
+}

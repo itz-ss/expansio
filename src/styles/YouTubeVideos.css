@@ -1,0 +1,125 @@
+.yt-wrapper {
+  padding: 50px 20px;
+  position: relative;
+  text-align: center;
+  background-color: #cae6f9;
+}
+
+.yt-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #003366;
+}
+
+/* Slider */
+.yt-track {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.yt-card {
+  width: 30%;
+  min-width: 350px;
+  cursor: pointer;
+  position: relative;
+}
+
+.yt-thumb {
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.25);
+}
+
+.yt-play {
+  position: absolute;
+  font-size: 3rem;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.45);
+  border-radius: 50%;
+  padding: 10px 24px;
+}
+
+/* Arrows */
+.yt-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: #003366;
+  color: white;
+  border-radius: 50%;
+  border: none;
+  padding: 8px 18px;
+  cursor: pointer;
+  transition: 0.28s;
+}
+.yt-btn.prev { left: 10px; }
+.yt-btn.next { right: 10px; }
+.yt-btn:hover { transform: scale(1.15) translateY(-50%); }
+
+/* Dots */
+/* .yt-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.dot {
+  width: 11px;
+  height: 11px;
+  background: #cfcfcf;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.dot.active {
+  background: #003366;
+  width: 30px;
+  border-radius: 7px;
+} */
+
+/* Modal */
+.yt-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+.yt-modal-content {
+  position: relative;
+  max-width: 900px;
+  width: 90%;
+}
+.yt-modal-content iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 12px;
+}
+.close-btn {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .yt-card {
+    width: 80%;
+    min-width: 80%;
+  }
+}

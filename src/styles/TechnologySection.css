@@ -1,0 +1,92 @@
+/* ======================================================
+   💠 TECHNOLOGY SECTION — UNIQUE STYLES
+   ====================================================== */
+
+.technology-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Content Layout */
+.tech-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* Text Content */
+.tech-content {
+  align-items: center;
+  text-align: center;
+  margin: 0 20px 0 40px;
+
+}
+
+.tech-subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.tech-title {
+  font-size: 2.2rem;
+  margin-bottom: 1.2rem;
+}
+
+.tech-description {
+  font-size: 1.05rem;
+}
+
+/* Image Container */
+.tech-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-image {
+  max-width: 60%;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.tech-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+.tech-descriptionUl{
+  text-align: left;
+  font-size: 1.05rem;
+}
+
+/* ======================================================
+   📱 RESPONSIVE
+   ====================================================== */
+@media (max-width: 992px) {
+  .tech-container {
+    grid-template-columns: 1fr;
+    /* text-align: center; */
+  }
+
+  .tech-content {
+    order: 2;
+    /* text-align: center; */
+  }
+
+  .tech-image-container {
+    order: 1;
+  }
+
+  .tech-title {
+    font-size: 1.8rem;
+  }
+
+  .tech-description {
+    padding: 0 20px 0 20px;
+  }
+}

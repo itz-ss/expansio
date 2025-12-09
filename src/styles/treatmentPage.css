@@ -1,0 +1,159 @@
+/* ==========================================================
+   🌐 TREATMENT PAGE — Global Wrapper
+   ========================================================== */
+.treatment-page {
+  background-color: #cae6f9; /* Page background */
+}
+
+/* ==========================================================
+   🩵 BANNER SECTION (Top Hero Image)
+   ========================================================== */
+.treatment-banner {
+  width: 100%;
+  aspect-ratio: 5 / 0.9; /* Controls height responsiveness */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+/* ==========================================================
+   🔷 COMMON SECTION WRAPPER
+   ========================================================== */
+.treatment-section {
+  margin: 28px 0;
+  padding-top: 5px;
+  transition: margin 0.3s ease;
+}
+
+/* ==========================================================
+   🔁 ALTERNATE LAYOUT -->
+   Forces TEXT on left and FORM on right in Section-2
+   (Do NOT remove unless you want image-right layout again)
+   ========================================================== */
+.alt-layout .col-md-6:first-child {
+  order: 1; /* Causes / RiskFactors (Text Block) */
+}
+.alt-layout .col-md-6:last-child {
+  order: 2; /* Appointment Form */
+}
+
+/* ==========================================================
+   📝 TITLES / DESCRIPTION
+   ========================================================== */
+.treatment-title {
+  font-family: Helvetica;
+  color: #00165b;
+  margin-bottom: 12px;
+}
+
+.treatment-desc {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: justify; /* Professional readability */
+}
+
+/* ==========================================================
+   📌 LIST STYLING (Causes / Risk Factors)
+   ========================================================== */
+.condition-list,
+.treatment-list {
+  list-style-type: disc;
+  margin-left: 1.4rem;
+  color: #444;
+}
+
+.sub-title {
+  color: #0a2a6a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* ==========================================================
+   🖼 MAIN IMAGE IN SECTION-1
+   ========================================================== */
+.treatment-image {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  margin-bottom: 8px;
+  transition: transform 0.4s ease;
+}
+.treatment-image:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================================
+   📌 INTERNAL BANNER (Under Causes/Risk Block)
+   Swaps doctor image based on JSON `isSpine`
+   ========================================================== */
+.add-banner {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* ==========================================================
+   🔧 VERTICAL CONTENT ALIGNMENT FOR SECTION-2
+   ========================================================== */
+.options-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-top: -100px;
+  transition: margin 0.3s ease;
+  align-items: flex-start;
+}
+
+/* ==========================================================
+   📅 APPOINTMENT FORM BOX (RIGHT SIDE)
+   ========================================================== */
+.appointment-box {
+  background: #f8fbff;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  align-self: center;
+}
+.appointment-box:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ==========================================================
+   📱 TABLET RESPONSIVE
+   ========================================================== */
+@media (max-width: 992px) {
+  .treatment-section {
+    margin: 22px 0;
+  }
+
+  .options-wrapper {
+    margin-top: -8px;
+  }
+
+  .appointment-box {
+    margin-top: 18px;
+  }
+}
+
+/* ==========================================================
+   📱 PHONE RESPONSIVE
+   ========================================================== */
+@media (max-width: 576px) {
+  .treatment-section {
+    margin: 14px 0;
+  }
+
+  .options-wrapper {
+    margin-top: -5px;
+  }
+
+  .appointment-box {
+    padding: 18px;
+  }
+}

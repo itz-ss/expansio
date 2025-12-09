@@ -1,0 +1,145 @@
+/* ======================================================
+   🌐 WELCOME SECTION — UNIQUE STYLES
+   ====================================================== */
+
+/* Section Layout */
+.welcome-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Image Column */
+.image-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 2rem; */
+}
+
+/* Image Grid */
+.image-grid {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 550px;
+  gap: 1rem;
+}
+
+/* Large Image */
+.grid-image.main-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* Small Image Row */
+.small-img-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.grid-image.small-img {
+  flex: 1;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* Text Column */
+.text-column {
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-content {
+  max-width: 650px;
+  margin: auto;
+}
+
+.welcome-content:hover{
+  font-size: 1.4rem;
+}
+
+.welcome-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.welcome-text {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.doctorName {
+  display: flex;
+  font-weight: 600;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  flex-direction: row-reverse;
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .welcome-section {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .image-grid {
+    max-width: 90%;
+  }
+
+  .grid-image.main-img {
+    height: 280px;
+  }
+
+  .grid-image.small-img {
+    height: 130px;
+  }
+
+  .text-column {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .welcome-title {
+    font-size: 1.8rem;
+  }
+
+  .doctorName{
+    font-size: 1.05rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .image-grid {
+    max-width: 95%;
+  }
+
+  .grid-image.main-img {
+    height: 230px;
+  }
+
+  .grid-image.small-img {
+    height: 120px;
+  }
+
+  .welcome-title {
+    font-size: 1.5rem;
+  }
+
+  .welcome-text {
+    font-size: 0.95rem;
+  }
+}
+

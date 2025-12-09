@@ -1,0 +1,45 @@
+/* ---------------------------------------------------------
+   🌐 Language Toggle — Consistent with AppointmentForm styling
+   --------------------------------------------------------- */
+
+/* 🚫 Prevent Google from translating this component */
+.notranslate * {
+  all: revert !important;
+}
+.notranslate {
+  translate: no;
+}
+
+/* 🎛 Main Toggle Button */
+.lang-toggle-btn {
+  /* background: #044ea2; */
+  border: none;
+  margin-left: 20px;
+  padding: 8px 16px;
+  color: #080808;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+/* 🖱 Hover feedback (desktop only) */
+.lang-toggle-btn:hover {
+  background: #0167e0;
+  transform: translateY(-2px);
+}
+
+/* ⏳ Disable interaction while Google loads */
+.lang-toggle-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+@media (max-width: 920px) {
+  .lang-toggle-btn {
+    display: none;
+  }
+}

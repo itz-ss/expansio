@@ -1,0 +1,304 @@
+/* =========================================================
+   🌐 PREMIUM SOLID NAVBAR
+   Sticky Top | Fixed Height | Responsive with Right-Side Menu
+   ========================================================= */
+
+/* 🧭 Navbar Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+  background: #e6f3f7;
+  border-bottom: 1px solid #cfe8f0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* 🧱 Navbar Container */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1380px;
+  padding: 0 2px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+/* 🩺 Logo */
+.logo img {
+  
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+/* 🔗 Desktop Navigation */
+.nav-links {
+  margin-top: 17px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  flex-grow: 1;
+}
+
+.nav-links a,
+.dropdown-btn {
+  color: #0d2345;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.dropdown-btn:hover {
+  color: #0077ff;
+  text-shadow: 0 0 6px rgba(0, 119, 255, 0.25);
+}
+
+/* =========================================================
+   🔽 DESKTOP DROPDOWN (Doctors + Treatments)
+   ========================================================= */
+.dropdown {
+  position: relative;
+}
+
+/* ✨ Dropdown Container */
+.dropdown-content {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 28px 45px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  min-width: 640px;
+  z-index: 2000;
+  border: 1px solid #dce9ee;
+  animation: dropdownLift 0.3s ease forwards;
+
+  /* 🟦 NEW: Scrollable dropdown when content exceeds screen */
+  max-height: 80vh;
+  overflow-y: auto;
+
+  /* 🟦 NEW: visible border */
+  border: 2px solid #cfe8f0;
+}
+
+/* Dropdown animation */
+@keyframes dropdownLift {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   🩻 DROPDOWN INNER COLUMNS (Desktop)
+   ========================================================= */
+.treatments-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+}
+
+.treatment-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.treatment-column h4 {
+  color: #0077ff;
+  font-size: 17px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0, 119, 255, 0.15);
+  padding-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+/* =========================================================
+   ✨ TEXT "COMING OUT" EFFECT ON HOVER
+   ========================================================= */
+.treatment-column a,
+.dropdown-content a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+  color: #0d2345;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* Slide text slightly to right */
+.treatment-column a:hover,
+.dropdown-content a:hover {
+  color: #0077ff;
+  transform: translateX(6px);
+}
+
+/* Animated underline */
+.treatment-column a::after,
+.dropdown-content a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #0077ff;
+  transition: width 0.25s ease;
+}
+
+.treatment-column a:hover::after,
+.dropdown-content a:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   🍔 MOBILE MENU
+   ========================================================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #0d2345;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.menu-toggle.open span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+.menu-toggle.open span:nth-child(2) { opacity: 0; }
+.menu-toggle.open span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+/* =========================================================
+   💙 Appointment Button
+   ========================================================= */
+.appointment-button button {
+  background: linear-gradient(135deg, #0077ff, #00b4d8);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 25px;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0, 119, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.appointment-button button:hover {
+  background: linear-gradient(135deg, #00b4d8, #0077ff);
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   📱 MOBILE VIEW
+   ========================================================= */
+@media (max-width: 992px) {
+
+  .menu-toggle { display: flex; }
+
+  .navbar {
+    height: auto;
+    padding: 10px 20px;
+    justify-content: space-between;
+  }
+
+  .nav-container {
+    padding: 0;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 75%;
+    height: calc(100vh - 20%);
+    background: #ffffff;
+    box-shadow: -3px 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px 15px;
+    gap: 20px;
+    transition: right 0.4s ease;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .nav-links.active { right: 0; margin-top: 0; }
+
+  .appointment-button { display: none; }
+
+  /* Mobile dropdown override */
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    background: #f8fafc;
+    width: 100%;
+    padding: 10px 12px;
+    margin-top: 5px;
+    border-radius: 6px;
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+  }
+
+  .dropdown.open > .dropdown-content { display: block; }
+
+  .treatments-columns {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .treatment-column {
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .treatment-column h4 {
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .treatment-column ul {
+    display: none;
+    margin-top: 8px;
+  }
+
+  .treatment-column.active ul {
+    display: block;
+  }
+}
+
+@media (max-width: 580px) {
+  .treatment-column a,
+.dropdown-content a {
+    width: 200px;
+  }
+}

@@ -1,0 +1,182 @@
+/* =========================================================
+   🌐 GLOBAL STYLESHEET
+   ========================================================= */
+
+/* =========================================================
+   🧭 1. CSS RESET + LAYOUT NORMALIZATION
+   ========================================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* (🔥 Remove this – it’s not needed and can be weird)
+   *[style*="width: 1"] {
+     width: 100% !important;
+   }
+*/
+
+/* =========================================================
+   🌈 2. ROOT VARIABLES
+   ========================================================= */
+:root {
+  --primary-color: #0a5ffb;
+  --primary-dark: #00165b;
+  --text-color: #2d2d2d;
+  --heading-color: #020e35;
+  --background-color: #e3f2fc;
+  --secondary-color: #0A5FFB;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+
+  --base-font-size: 20px;
+}
+
+/* =========================================================
+   🧍‍♂️ 3. BODY — GLOBAL TEXT & BACKGROUND
+   ========================================================= */
+html, body {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  margin-top: 10vh;
+  padding: 0;
+  font-family: "Poppins", "Inter", sans-serif;
+  font-size: var(--base-font-size);
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);   /* ✅ fixed var syntax */
+  letter-spacing: 0.3px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   🧱 4. HEADINGS
+   ========================================================= */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Poppins", sans-serif;
+  color: var(--heading-color);
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: var(--space-1);
+  text-align: center;
+}
+
+h4 {
+  color: var(--secondary-color);  /* ✅ fixed var syntax */
+  font-weight: 500;
+   text-align: center;
+}
+
+/* =========================================================
+   📝 5. PARAGRAPHS
+   ========================================================= */
+p {
+  margin-bottom: 1rem;
+  margin: var(--space-1);
+  text-align: justify;
+}
+
+/* =========================================================
+   🔗 6. LINKS
+   ========================================================= */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+a:hover {
+  color: var(  --background-color);
+}
+
+/* =========================================================
+   📦 7. SECTIONS
+   ========================================================= */
+section {
+  padding: 60px 0;
+  width: 100%;        /* ⭐ ensure full width sections */
+}
+
+/* =========================================================
+   🖼 8. GLOBAL IMAGES
+   ========================================================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =========================================================
+   🧠 9. HERO / MAIN BANNER
+   ========================================================= */
+.main {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+}
+.main:hover {
+  transform: scale(1.01);
+}
+
+/* =========================================================
+   📱 10. RESPONSIVE
+   ========================================================= */
+@media (max-width: 992px) {
+  body { font-size: 16px; }
+  section { padding: 40px 0; }
+  .main { height: 60vh; }
+}
+
+@media (max-width: 576px) {
+  body { font-size: 15px; }
+  section { padding: 32px 0; }
+  .main { height: 45vh; border-radius: 6px; }
+}
+
+/* =========================================
+   🔧 Override Bootstrap container behavior
+   Make sure containers don't shrink the page
+   ========================================= */
+
+.container,
+.container-fluid {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Ensure root layout always spans full viewport width */
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner,
+iframe.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+body {
+  top: 0 !important;
+  position: static !important;
+}
+.skiptranslate {
+  display: none !important;
+}

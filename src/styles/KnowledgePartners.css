@@ -1,0 +1,106 @@
+/* 🌐 PARTNERS SECTION — Responsive Grid Layout */
+.partners-section {
+  text-align: center;
+}
+
+/* 🩺 Section Header Styling */
+.partners-header {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+}
+
+.partners-subtitle {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.partners-title {
+  margin-bottom: 1rem;
+}
+
+.partners-description {
+  text-align: center;
+}
+
+/* =========================================================
+   🧱 PARTNERS LOGOS — GRID SYSTEM
+   ========================================================= */
+.partners-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* 🔗 Each logo container */
+.partner-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🖼️ Logo image */
+.partner-logo {
+  width: 140px;
+  transition: all 0.4s ease;
+}
+
+/* ✨ Hover effect — full color + slight zoom */
+.partner-logo:hover {
+  transform: scale(1.05);
+}
+
+/* =========================================================
+   📱 RESPONSIVE GRID BEHAVIOR
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .partners-logos {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+
+  .partner-logo {
+    width: 120px;
+  }
+
+  .partners-title {
+    font-size: 1.8rem;
+  }
+
+  .partners-description{
+    text-align: justify;
+    padding: 0 20px 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .partners-logos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .partner-logo {
+    width: 100px;
+  }
+
+  .partners-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .partners-logos {
+    gap: 1.5rem;
+  }
+
+  .partner-logo {
+    width: 90px;
+  }
+}

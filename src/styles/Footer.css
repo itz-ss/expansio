@@ -1,0 +1,255 @@
+/* ================================================== */
+/* 🌟 ULTRA-COMPACT, NO-SCROLLBAR FOOTER DESIGN */
+/* ================================================== */
+
+footer {
+  background: #f9fbfd;
+  color: #222;
+  font-family: "Poppins", sans-serif;
+  border-top: 1px solid #dee2e6;
+  padding: 20px 0 0; /* 🔹 minimum clean top padding */
+  margin: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+/* Reduce container side spacing */
+footer .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Headings */
+footer h5 {
+  color: #003366;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  border-left: 3px solid #007bff;
+  padding-left: 6px;
+  margin-bottom: 0.5rem; /* tighter */
+}
+
+/* Paragraphs & Links */
+footer p,
+footer a {
+  font-size: 0.85rem;
+  color: #333;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.25s ease;
+}
+footer a:hover {
+  color: #007bff;
+}
+
+/* ========================================= */
+/* 🧠 Treatments Section (No Scrollbar) */
+/* ========================================= */
+footer .row .col-md-5 .row {
+  max-height: none;
+  overflow: hidden; /* 🚫 no scrollbar */
+}
+
+footer .row .col-md-5 a {
+  display: inline-block;
+  font-size: 0.84rem;
+  padding: 1px 0;
+}
+footer .row .col-md-5 a:hover {
+  text-decoration: underline;
+}
+
+/* ========================================= */
+/* 🌐 Social & Reviews Section */
+/* ========================================= */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.3rem; /* tighter gap */
+}
+
+.footer-social h5 {
+  border: none;
+  margin: 0;
+  color: #003366;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* Social Icons Row */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* Icon styling */
+.social-icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+.social-icon:hover {
+  transform: translateY(-2px);
+}
+
+/* Platform colors */
+.social-icon:nth-child(1) { background: #1877f2; } /* Facebook */
+.social-icon:nth-child(2) { background: #e1306c; } /* Instagram */
+.social-icon:nth-child(3) { background: #25d366; } /* WhatsApp */
+.social-icon:nth-child(4) { background: #ff0000; } /* YouTube */
+
+.footer-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+}
+
+/* Google Review */
+.google-review-img {
+  width: 100px;
+  height: auto;
+  margin-top: 6px;
+  transition: transform 0.25s ease;
+}
+.google-review-img:hover {
+  transform: scale(1.05);
+}
+
+/* ========================================= */
+/* 📅 COPYRIGHT BAR (Pinned at Bottom of Footer) */
+/* ========================================= */
+footer .border-top {
+  border-top: 1px solid #d6e4ff !important;
+  margin-top: 10px; /* reduced spacing above */
+  padding-top: 6px; /* minimal but readable */
+  text-align: center;
+  width: 100%;
+  position: relative;
+}
+
+footer small {
+  font-size: 0.8rem;
+  color: #6c757d;
+  letter-spacing: 0.3px;
+  display: inline-block;
+}
+
+/* ========================================= */
+/* 📱 Responsive Design */
+/* ========================================= */
+@media (max-width: 992px) {
+  footer {
+    text-align: center;
+    padding-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  footer .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer-social {
+    align-items: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  footer h5 {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  footer .row .col-md-5 .row {
+    max-height: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .social-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .footer-icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .google-review-img {
+    width: 90px;
+  }
+
+  footer small {
+    font-size: 0.75rem;
+  }
+}
+.google-review-img {
+  width: 100px;
+  height: auto;
+  transition: transform 0.25s ease;
+}
+.google-review-img:hover {
+  transform: scale(1.05);
+}
+
+/* 📍 Location Icon Styling */
+.location-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.25s ease;
+}
+.location-icon:hover {
+  transform: scale(1.1);
+}
+
+.location-img {
+  width: 80px;
+  height: 70px;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+/* Desktop (default): bottom-right absolute */
+.footer-brand-badge {
+  position: absolute;
+  right: 15px;
+  /* bottom: 5px; */
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Tablet view: move to center under copyright */
+@media (max-width: 992px) {
+  .footer-brand-badge {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    margin-top: 8px;
+    justify-content: center;
+    transform: none;
+  }
+}
+
+/* Mobile view: full width, centered, no overlap */
+@media (max-width: 576px) {
+  .footer-brand-badge {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  }
+}

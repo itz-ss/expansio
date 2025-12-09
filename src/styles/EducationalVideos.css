@@ -1,0 +1,148 @@
+/* Page container */
+.media-page {
+  max-width: 1300px;
+  margin: 70px auto;
+  padding: 0 20px;
+}
+
+/* Page Header */
+.media-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+}
+.media-header p {
+  margin-top: 4px;
+  color: #666;
+}
+
+/* Dropdowns */
+.media-dropdowns {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 22px 0;
+}
+.media-select {
+  padding: 9px 16px;
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  background: white;
+  font-size: 15px;
+  cursor: pointer;
+  color: #007bff;
+}
+
+/* Category title */
+.media-section-title {
+  font-size: 26px;
+  margin-bottom: 12px;
+  border-left: 5px solid #007bff;
+  padding-left: 12px;
+}
+
+/* Premium Responsive Grid */
+.media-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Force layout logic */
+@media (min-width: 1024px) {
+  .media-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .media-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Card */
+.media-card {
+  background: none;
+  border-radius: 10px;
+  /* box-shadow: 0 5px 20px rgba(0,0,0,0.08); */
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: 0.25s;
+}
+.media-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Thumbnail */
+.media-thumb img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  height: 190px;
+}
+
+/* Description */
+.media-description {
+  font-size: 15px;
+  color: #444;
+}
+
+/* Video embed */
+.media-video {
+  width: 100%;
+  border-radius: 12px;
+}
+.youtube-embed iframe {
+  width: 100%;
+  height: 235px;
+  border-radius: 12px;
+}
+
+/* Show More button */
+.media-loadmore-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.media-loadmore {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.media-loadmore:hover {
+  background: #005bd1;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 7px 14px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.pagination button.active-page {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

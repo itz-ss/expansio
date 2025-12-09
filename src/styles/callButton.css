@@ -1,0 +1,65 @@
+/* 🌟 Floating Call Button */
+.call-float {
+  position: fixed;
+  bottom: 90px; /* Slightly above WhatsApp if both exist */
+  left: 20px;
+  background: linear-gradient(135deg, #53c65c, #00944a);
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  animation: callPulse 2.5s infinite ease-in-out;
+}
+
+.call-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 128, 0, 0.35);
+}
+
+.call-icon {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1); /* makes white icon */
+  pointer-events: none;
+}
+
+/* 💓 Pulse Animation */
+@keyframes callPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .call-float {
+    width: 50px;
+    height: 50px;
+    bottom: 80px;
+    left: 15px;
+  }
+
+  .call-icon {
+    width: 26px;
+    height: 26px;
+  }
+}
+@media (max-width: 992px) {
+  .call-float{
+    display: none;
+  }
+  .call-icon {
+    display: none;
+  }
+}

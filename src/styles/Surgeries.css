@@ -1,0 +1,137 @@
+.surgeries-section {
+  padding: 5rem 0;
+  background: #f9fafc;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.surgeries-header {
+  margin-bottom: 3rem;
+  max-width: 750px;
+  margin-inline: auto;
+}
+
+.surgeries-subtitle {
+  color: #0066cc;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.surgeries-title {
+  font-size: 2.4rem;
+  color: #1c1c1c;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+.surgeries-desc {
+  color: #555;
+  line-height: 1.8;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+}
+
+/* Premium card grid */
+.surgeries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Tablet view: 2 cards per row */
+@media (max-width: 992px) {
+  .surgeries-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile view: 1 card per row */
+@media (max-width: 600px) {
+  .surgeries-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.surgery-card-premium {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.surgery-card-premium:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.surgery-img-container {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.surgery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.surgery-card-premium:hover .surgery-img {
+  transform: scale(1.08);
+}
+
+.surgery-card-body {
+  padding: 1.5rem;
+}
+
+.surgery-card-body h4 {
+  font-size: 1.25rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.surgery-card-body p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.learn-more {
+  font-weight: 600;
+  color: #0066cc;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.surgery-card-premium:hover .learn-more {
+  color: #004a99;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .surgeries-title {
+    font-size: 2rem;
+  }
+  .surgery-img-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .surgeries-section {
+    padding: 3rem 0;
+  }
+  .surgery-img-container {
+    height: 180px;
+  }
+}

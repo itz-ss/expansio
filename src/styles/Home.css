@@ -1,0 +1,63 @@
+/* ================================
+   🖼 MAIN BANNER IMAGE STYLING
+   ================================ */
+
+/* Ensures the banner scales perfectly to any screen size */
+
+.main-banner {
+  width: 100%;                 /* Make banner stretch to full container width */
+  height: auto;                /* Keep original image ratio */
+  max-height: 80vh;            /* Prevents banner from being too tall on big screens */
+  object-fit: cover;           /* Crops edges gracefully if needed */
+  border-radius: 12px;         /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
+  background-color: transparent;
+}
+
+/* Adds a subtle zoom on hover for interactivity */
+.main-banner:hover {
+  transform: scale(1.02);        /* Slight zoom-in effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ================================
+   📱 RESPONSIVENESS SETTINGS
+   ================================ */
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 992px) {
+  .main-banner {
+    max-height: 60vh;           /* Adjusts height for smaller displays */
+    border-radius: 10px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 576px) {
+  .main-banner {
+    max-height: 45vh;           /* Keeps banner compact on mobile */
+    border-radius: 8px;
+    box-shadow: none;           /* Removes heavy shadow for clean mobile layout */
+  }
+}
+
+/* ================================
+   🎨 OPTIONAL: SECTION STYLING
+   ================================ */
+
+/* Adds gentle spacing and clean background for the hero section */
+.hero {
+  /* background: linear-gradient(to bottom, #f9fcff, #ffffff);  */
+  /* Soft white gradient */
+  padding-top: 1rem;            /* Top space for header */
+  padding-bottom: 1rem;         /* Bottom space for next section */
+}
+
+/* Centers everything nicely in the hero container */
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

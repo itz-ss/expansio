@@ -1,0 +1,154 @@
+/* ---------------------------------------------------------
+   🌐 Appointment Form — Modern UI | Neuron Brain & Spine Centre
+   ---------------------------------------------------------
+   This stylesheet ensures:
+   ✔ Perfect vertical alignment of all fields
+   ✔ Fully responsive layout
+   ✔ Premium professional styling
+   ✔ Zero bootstrap conflict
+--------------------------------------------------------- */
+
+/* 🔧 Force top-to-bottom structure (no side alignment mistakes) */
+.appointment-container form,
+.appointment-container .row {
+  display: block !important;
+}
+
+.appointment-container .col-md-6,
+.appointment-container .col-12 {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* 🎨 Main Card Container */
+.appointment-container {
+  background: linear-gradient(145deg, #f7fdff, #f5faff);
+  border: 1px solid #e6efff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 77, 153, 0.08);
+  max-width: 650px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.appointment-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 77, 153, 0.15);
+}
+
+/* 🏷️ Section Heading */
+.appointment-container h3 {
+  font-weight: 600;
+  color: #003366;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+/* 🧾 Form Label */
+.form-label {
+  font-weight: 500;
+  color: #003366;
+  margin-bottom: 6px;
+}
+
+/* ✏️ Inputs & Textarea */
+.form-control {
+  border-radius: 10px;
+  border: 1px solid #cfdff6;
+  padding: 0.75rem;
+  transition: all 0.25s ease;
+}
+
+.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+}
+
+/* 🔘 Submit Button */
+.btn-primary {
+  background: linear-gradient(90deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 12px;
+  padding: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #006ae6, #004999);
+  transform: translateY(-2px);
+}
+
+/* ℹ️ Status message block */
+.alert-info {
+  background-color: #eaf5ff;
+  border-color: #cce5ff;
+  color: #004085;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* 📱 Mobile Tweaks */
+@media (max-width: 576px) {
+  .appointment-container {
+    padding: 1.5rem;
+  }
+  .appointment-container h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* 🧩 Field Alignment Fix — nothing shifts horizontally */
+.appointment-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.appointment-container .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start !important;
+  gap: 10px;
+}
+
+/* 🧱 Make columns internally vertical */
+.appointment-container .col-md-6,
+.appointment-container .col-12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* 🎯 Perfect field spacing */
+.appointment-container .mb-3 {
+  margin-bottom: 0.9rem !important;
+}
+
+/* 📅 Date & ⏰ Time side-by-side on big screens */
+@media (min-width: 768px) {
+  .appointment-container .d-flex.gap-3 {
+    gap: 1rem !important;
+  }
+}
+
+/* 📌 Date & time input styling */
+input[type="date"],
+input[type="time"] {
+  border: 1px solid #cfe8f0;
+  border-radius: 6px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus {
+  border-color: #0077ff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 255, 0.15);
+}
