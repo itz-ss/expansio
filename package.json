@@ -1,7 +1,7 @@
 {
   "name": "expansio-portfolio",
   "version": "1.0.0",
-  "homepage": "http://astraderslko.co.in/",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "bootstrap": "^5.3.8",

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/callButton.css";
 
 const CallButton = () => {
-  const phoneNumber = "+917080106535"; // your clinic number
+  const phoneNumber = "+919120277738"; // your clinic number
 
   return (
     <a

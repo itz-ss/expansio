@@ -1,10 +1,7 @@
 // src/data/servicesData.js
-// Complete service dataset for all treatments (spine, brain, bone)
-// Each entry is designed for patient-friendly readability and integration with TreatmentPage
 
 export const servicesData = {
-  // Dr Achal  //waring: do not change the key 'spine' or "brain"
-  // instead of Spine Treatments its now Dr Achal Gupta so do not change the key who ever you are otherwise be ready to change all imports
+
   spine: [
     {
       label: " Social Media Management", //1
@@ -12,12 +9,13 @@ export const servicesData = {
       banner: "/assets/banner/slip-disc-surgery.jpg",
       image: "/assets/treatmentPhotos/slipped-disc-surgery.jpg",
       description:
-        "A slipped disc occurs when the cushion between spinal bones bulges out or ruptures, pressing on nearby nerves. Surgery removes or repairs the disc to relieve pain, restore movement, and prevent further nerve damage. Minimally invasive techniques ensure faster healing, minimal scars, and quicker return to daily life.",
+        "Strategically manage your social presence to build a strong, consistent brand online. Stay active on the right platforms while every post, reply, and campaign is handled for you.",
       commonConditions: [
-        "Herniated Discs",
-        "Sciatica",
-        "Nerve Compression",
-        "Chronic Back Pain",
+        "Complete profile setup and optimization",
+        "Monthly content calendar and posting",
+        "Community management and engagement",
+        "Hashtag and trend research",
+         "Performance tracking and monthly reports",
       ],
       treatmentOptions: {
         nonSurgical:

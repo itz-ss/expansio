@@ -213,11 +213,25 @@
   transform: translateY(-2px);
 }
 
+.companyLogin{
+  margin-left: 20px;
+}
+
+.companyLogin2{
+  display: none;
+}
 /* =========================================================
    📱 MOBILE VIEW
    ========================================================= */
 @media (max-width: 992px) {
 
+  .companyLogin{
+  display: none;
+}
+
+.companyLogin2{
+  display: visible;
+}
   .menu-toggle { display: flex; }
 
   .navbar {
@@ -302,3 +316,4 @@
     width: 200px;
   }
 }
+

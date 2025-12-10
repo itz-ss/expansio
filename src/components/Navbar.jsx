@@ -247,15 +247,19 @@ const Navbar = () => {
           </li>
 
           <li><Link to="/contact">Contact</Link></li>
+          <li><Link className="companylogin2" to="https://tms-pearl-zeta.vercel.app/dashboard">Company Login</Link></li>
         </ul>
 
         {/* 💙 Appointment Button */}
-        <div className="appointment-button">
-          <Button variant="primary" size="sm" href="/appointment">
+        <div className="appointment-button ">
+          <Button variant="primary" size="sm" href="/appointment" >
             Appointment
           </Button>
         </div>
-        <LanguageToggle />
+        {/* <LanguageToggle /> */}
+        <Button variant="primary companyLogin" size="sm" href="https://tms-pearl-zeta.vercel.app/dashboard">
+            Company Login
+          </Button>
       </div>
     </nav>
   );
