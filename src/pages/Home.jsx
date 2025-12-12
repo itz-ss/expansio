@@ -34,8 +34,8 @@ function Home() {
       {/* Banner Image */}
       <img
         className="main-banner"
-        src="/assets/banner/heroBanner.jpg"
-        alt="Main banner showing the doctor and clinic theme"
+        src="/assets/banners/hb.jpg"
+        alt="expansio banner"
       />
 
       {/* ⭐ YOUR TEXT OVER THE BANNER */}

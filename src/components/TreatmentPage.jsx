@@ -41,7 +41,8 @@ const ServicePage = () => {
       <section className="service-banner-section">
         <motion.div
           className="service-banner"
-          style={{ backgroundImage: `url(${service.banner} || /assets/banner/servicebanner.png)` }}
+          // style={{ backgroundImage: `url(${service.banner} || /assets/banner/servicebanner.png)` }}
+          style={{ backgroundImage: `url(/assets/banners/service.png)` }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
