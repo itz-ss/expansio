@@ -1,20 +1,21 @@
 /* ==========================================================
-   GENERAL PAGE BASE
-   ========================================================== */
+   BASE SECTION
+========================================================== */
 .contact-section {
   font-family: "Poppins", sans-serif;
-  /* background-color: #f9fafc; */
+  background-color: #f0e1e9;
+  padding-bottom: 50px;
 }
 
 /* ==========================================================
-   NEW RESPONSIVE HERO BANNER (REPLACES OLD contact-banner)
-   ========================================================== */
+   PREMIUM HERO BANNER WITH GLASS OVERLAY
+========================================================== */
 .contact-hero {
   position: relative;
   width: 100%;
-  height: auto;                 /* Balanced height */
-  min-height: 220px;            /* Ensures visibility on small phones */
-  max-height: 420px;
+  height: 48vh;
+  min-height: 260px;
+  max-height: 500px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -24,187 +25,173 @@
 .contact-hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;            /* Keeps banner proportional */
+  object-fit: cover;
   object-position: center;
+  filter: brightness(0.85);
 }
 
 .contact-hero-overlay {
-   position: absolute;
+  position: absolute;
   inset: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(6px);
 }
 
 .contact-hero-title {
- color: #fff;
-  font-size: clamp(1.4rem, 4vw, 2.6rem); /* Auto scaling text */
+  color: #ffffff;
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: 700;
   text-align: center;
+  padding: 0 20px;
   line-height: 1.2;
+  text-shadow: 0 3px 12px rgba(0,0,0,0.35);
 }
 
-@media (max-width: 768px) {
-  .contact-hero-title {
-    font-size: 2rem;
+/* Tablet */
+@media (max-width: 992px) {
+  .contact-hero {
+    height: 40vh;
+    min-height: 220px;
   }
+
+  .contact-hero-title {
+    font-size: 2.2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
   .contact-hero {
     height: 32vh;
-    min-height: 200px;
+    min-height: 190px;
   }
-}
 
-@media (max-width: 480px) {
   .contact-hero-title {
     font-size: 1.7rem;
   }
-  .contact-hero {
-    height: 28vh;
-    min-height: 180px;
-  }
 }
 
 /* ==========================================================
-   CONTACT CARD
-   ========================================================== */
+   PREMIUM CONTACT CARD
+========================================================== */
 .contact-card {
-  background: linear-gradient(145deg, #f0f7ff 0%, #e7f1ff 45%, #f5faff 100%);
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  /* background: rgba(255, 255, 255, 0.75); */
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.07);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border: 1px solid rgba(255,255,255,0.5);
 }
 
 .contact-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* ==========================================================
-   HEADER TEXT
-   ========================================================== */
+/* Header Styling */
 .contact-header h3 {
-  font-size: 1.4rem;
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  color: #0d1a42;
 }
 
 .contact-header p {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: #555;
+  color: #5a5a5a;
+  line-height: 1.55;
+  margin-bottom: 6px;
 }
 
 /* Divider */
 .contact-divider {
-  border: 0;
   height: 1px;
-  background: linear-gradient(to right, transparent, #0077ff40, transparent);
+  background: linear-gradient(to right, transparent, #0077ff60, transparent);
+  border: none;
   margin: 1.5rem 0;
 }
 
 /* ==========================================================
-   CONTACT INFO ITEMS
-   ========================================================== */
+   CONTACT ITEMS
+========================================================== */
 .contact-item h5 {
-  color: #0077ff;
-  font-size: 1rem;
+  font-size: 1.1rem;
+  color: #005fdd;
   margin-bottom: 6px;
 }
 
 .contact-link {
   text-decoration: none;
-  color: #333;
-  font-weight: 500;
+  color: #222;
+  font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .contact-link:hover {
-  color: #0077ff;
+  color: #005fdd;
 }
 
 /* ==========================================================
-   PHOTO SECTION
-   ========================================================== */
-.contact-photo {
-  margin-top: 25px;
-}
-
+   PHOTO UNDER CONTACT DETAILS
+========================================================== */
 .contact-photo img {
   width: 100%;
-  border-radius: 12px;
+  border-radius: 14px;
   object-fit: cover;
-  max-height: 240px;
+  max-height: 260px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   transition: transform 0.4s ease;
-  margin-top: 20px;
 }
 
 .contact-photo img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 /* ==========================================================
-   APPOINTMENT FORM BOX
-   ========================================================== */
+   PREMIUM APPOINTMENT FORM BOX
+========================================================== */
 .appointment-box {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-  padding: 35px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: transform 0.3s ease;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 40px 38px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255,255,255,0.5);
 }
 
 .appointment-box:hover {
-  transform: translateY(-3px);
-}
-
-/* Equal Height Columns */
-@media (min-width: 992px) {
-  .contact-section .row {
-    display: flex;
-    align-items: stretch;
-  }
-
-  .contact-card,
-  .appointment-box {
-    flex-grow: 1;
-  }
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
 }
 
 /* ==========================================================
-   RESPONSIVE BREAKPOINTS
-   ========================================================== */
+   RESPONSIVE — FORM + CARD STACK
+========================================================== */
 @media (max-width: 992px) {
-  .contact-hero {
-    height: 40vh;
-  }
-
-  .contact-hero-title {
-    font-size: 2rem;
-  }
-
   .contact-card,
   .appointment-box {
-    margin-bottom: 25px;
-    padding: 25px 20px;
+    padding: 26px 22px;
+    margin-bottom: 30px;
   }
 
   .contact-photo img {
-    max-height: 200px;
+    max-height: 210px;
+  }
+
+  .contact-section .row {
+    flex-direction: column;
   }
 }
 
+/* Mobile */
 @media (max-width: 576px) {
-  .contact-hero {
-    height: 35vh;
+  .appointment-box {
+    padding: 22px;
   }
 
-  .contact-hero-title {
-    font-size: 1.6rem;
+  .contact-card {
+    padding: 22px;
   }
 
   .contact-photo img {

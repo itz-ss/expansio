@@ -19,7 +19,7 @@ function Contact() {
       {/* 🟦 Responsive Banner Section */}
       <section className="contact-hero">
         <img
-          src="/assets/banner/contact-banner.png"   // <-- change to your image path
+          src="/assets/banners/hb.jpg"   // <-- change to your image path
           alt="Contact Dr. Achal Gupta"
           className="contact-hero-img"
         />
@@ -54,11 +54,11 @@ function Contact() {
                  Expansio Marketing
                 </h3>
                  <p className="text-muted mb-0 fs-6">
-                  Stop Thinking. Start Earning. 
+                 <b> Stop Thinking. Start Earning.</b>
                 </p>
                 <p className="text-muted mb-0 fs-6">
                  Every minute you wait, a customer clicks on your competitor’s website instead of yours.
-                 <p className="text-muted mb-0 fs-6">
+                <p className="text-muted mb-0 fs-6">
                  Every day you delay, you lose money that belongs in your pocket. You have two choices today:
                 </p>
                 </p>
@@ -66,13 +66,13 @@ function Contact() {
                  Close this window, go back to the old way, and struggle for sales.
                 </p>
                 <p className="text-muted mb-0 fs-6">
-                  We only accept clients who are serious about winning. Are you ready to be #1?
+                  We only accept clients who are serious about winning. Are you ready to be <b>#1</b>?
                 </p>
                  <p className="text-muted mb-0 fs-6">
-                 Contact Expansio and turn your business into a cash-flow machine.
+                <b>Contact Expansio</b> and turn your business into a cash-flow machine.
                 </p>
                 <p className="text-muted mb-0 fs-6">
-                  expansio,630/7, Shiv Behar, Faradi Nagar, Indra Nagar, lucknow, Uttar Pradesh, India, 226016
+                  <b>expansio,630/7, Shiv Behar, Faradi Nagar, Indra Nagar, lucknow, Uttar Pradesh, India, 226016</b>
                 </p>
               </div>
 
@@ -116,7 +116,7 @@ function Contact() {
                 viewport={{ once: true }}
               >
                 <img
-                  src="/assets/about/achal6.jpg"
+                  src="/assets/images/contact.png"
                   alt="Neuron Brain & Spine Center Lucknow"
                   className="img-fluid rounded shadow-sm"
                 />
