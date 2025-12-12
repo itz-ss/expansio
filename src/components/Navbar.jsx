@@ -9,32 +9,36 @@ import LanguageToggle from "./LanguageToggle";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const [mediaOpen, setMediaOpen] = useState(false);
-
   const [openDropdown, setOpenDropdown] = useState(null);
   const [openSubDropdown, setOpenSubDropdown] = useState(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
   const location = useLocation();
   const navRef = useRef(null);
 
-  // media routes
+  // Media routes
   const mediaLinks = [
-  { label: "Educational Videos", path: "/media/educational-videos" },
-  { label: "Events", path: "/media/events" },
-  // { label: "InTheNews", path: "/media/in-the-news" },
-  { label: "Podcasts", path: "/media/podcasts" },
-  { label: "Testimonials", path: "/media/testimonials" },
-];
+    { label: "Educational Videos", path: "/media/educational-videos" },
+    { label: "Events", path: "/media/events" },
+    { label: "Podcasts", path: "/media/podcasts" },
+    { label: "Testimonials", path: "/media/testimonials" },
+  ];
 
+  // SMART CATEGORY MAP → Automatically adapts to JSON keys
+  const categoryTitles = {
+    socialMedia: "Social Media & Content",
+    advertising: "Paid Advertising & Performance",
+    brandingDesign: "Branding & Creative Direction",
+    webAndAutomation: "Web • Funnels • Automation",
+  };
 
-  // ✅ Update mobile view dynamically
+  // Detect mobile
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 992);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ✅ Close dropdowns on outside click
+  // Close on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (navRef.current && !navRef.current.contains(event.target)) {
@@ -46,82 +50,48 @@ const Navbar = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // ✅ Reset menus when route changes
+  // Reset menu on navigation change
   useEffect(() => {
     setMenuOpen(false);
     setOpenDropdown(null);
     setOpenSubDropdown(null);
   }, [location.pathname]);
 
-  const toggleDropdown = (section) => {
-    setOpenDropdown(openDropdown === section ? null : section);
-  };
+  const toggleDropdown = (key) =>
+    setOpenDropdown(openDropdown === key ? null : key);
 
-  const toggleSubDropdown = (section) => {
-    setOpenSubDropdown(openSubDropdown === section ? null : section);
-  };
+  const toggleSubDropdown = (key) =>
+    setOpenSubDropdown(openSubDropdown === key ? null : key);
 
   return (
     <nav className="navbar" ref={navRef}>
       <div className="nav-container">
-        {/* 🧩 LOGO */}
+
+        {/* LOGO */}
         <Link to="/" className="logo">
-          <img
-            src="/assets/ExpansioLogo.png"
-            alt="Logo"
-          />
+          <img src="/assets/ExpansioLogo.png" alt="Logo" />
         </Link>
 
-        {/* 🍔 HAMBURGER */}
+        {/* HAMBURGER */}
         <div
           className={`menu-toggle ${menuOpen ? "open" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </div>
 
-        {/* 🔗 NAV LINKS */}
+        {/* NAVIGATION LINKS */}
         <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
           <li><Link to="/">Home</Link></li>
 
-          {/* 🩺 DOCTORS */}
-          <li className={`dropdown ${openDropdown === "doctors" ? "open" : ""}`}>
-            <span
-              className="dropdown-btn"
-              onClick={() => toggleDropdown("doctors")}
-            >
-              Doctors <span className="arrow">▼</span>
+          {/* -------------------- SERVICES (NEW) -------------------- */}
+          <li className={`dropdown ${openDropdown === "services" ? "open" : ""}`}>
+            <span className="dropdown-btn" onClick={() => toggleDropdown("services")}>
+              Services <span className="arrow">▼</span>
             </span>
 
             <AnimatePresence>
-              {openDropdown === "doctors" && (
-                <motion.ul
-                  className="dropdown-content"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ height: "auto", opacity: 1 }}
-                  exit={{ height: 0, opacity: 0 }}
-                  transition={{ duration: 0.25 }}
-                >
-                  <li><Link to="/about/dr-achal-gupta">Dr. Achal Gupta</Link></li>
-                  <li><Link to="/about/dr-konika-bansal">Dr. Konika Bansal</Link></li>
-                </motion.ul>
-              )}
-            </AnimatePresence>
-          </li>
-
-          {/* 💊 TREATMENTS */}
-          <li className={`dropdown ${openDropdown === "treatments" ? "open" : ""}`}>
-            <span
-              className="dropdown-btn"
-              onClick={() => toggleDropdown("treatments")}
-            >
-              Treatments <span className="arrow">▼</span>
-            </span>
-
-            <AnimatePresence>
-              {openDropdown === "treatments" && (
+              {openDropdown === "services" && (
                 <motion.div
                   className="dropdown-content treatments-dropdown"
                   initial={{ opacity: 0, y: -10 }}
@@ -129,101 +99,67 @@ const Navbar = () => {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.25 }}
                 >
-                  {/* 💻 Desktop View - Two Columns */}
+
+                  {/* =================== DESKTOP =================== */}
                   {!isMobile ? (
                     <div className="treatments-columns">
-                      <div className="treatment-column">
-                        <h4>Dr Achal Gupta</h4>
-                        <ul>
-                          {servicesData.spine.map((item, i) => (
-                            <li key={i}><Link to={item.to}>{item.label}</Link></li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="treatment-column">
-                        <h4>Dr Konika Bansal</h4>
-                        <ul>
-                          {servicesData.brain.map((item, i) => (
-                            <li key={i}><Link to={item.to}>{item.label}</Link></li>
-                          ))}
-                        </ul>
-                      </div>
+                      {Object.keys(servicesData).map((categoryKey) => (
+                        <div className="treatment-column" key={categoryKey}>
+                          <h4>{categoryTitles[categoryKey] || categoryKey}</h4>
+                          <ul>
+                            {servicesData[categoryKey].map((item, i) => (
+                              <li key={i}>
+                                <Link to={item.to}>{item.label}</Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
                     </div>
                   ) : (
-                    /* 📱 Mobile Accordion */
+                    /* =================== MOBILE ACCORDION =================== */
                     <div className="mobile-accordion">
-                      <div className="accordion-section">
-                        <div
-                          className="accordion-header"
-                          onClick={() => toggleSubDropdown("spine")}
-                        >
-                          Dr Achal Gupta
-                          <span className="accordion-arrow">
-                            {openSubDropdown === "spine" ? "▲" : "▼"}
-                          </span>
-                        </div>
-                        <AnimatePresence>
-                          {openSubDropdown === "spine" && (
-                            <motion.ul
-                              className="accordion-content"
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.25 }}
-                            >
-                              {servicesData.spine.map((item, i) => (
-                                <li key={i}><Link to={item.to}>{item.label}</Link></li>
-                              ))}
-                            </motion.ul>
-                          )}
-                        </AnimatePresence>
-                      </div>
+                      {Object.keys(servicesData).map((categoryKey) => (
+                        <div className="accordion-section" key={categoryKey}>
+                          <div
+                            className="accordion-header"
+                            onClick={() => toggleSubDropdown(categoryKey)}
+                          >
+                            {categoryTitles[categoryKey] || categoryKey}
+                            <span className="accordion-arrow">
+                              {openSubDropdown === categoryKey ? "▲" : "▼"}
+                            </span>
+                          </div>
 
-                      <div className="accordion-section">
-                        <div
-                          className="accordion-header"
-                          onClick={() => toggleSubDropdown("brain")}
-                        >
-                          Dr Konika Bansal
-                          <span className="accordion-arrow">
-                            {openSubDropdown === "brain" ? "▲" : "▼"}
-                          </span>
+                          <AnimatePresence>
+                            {openSubDropdown === categoryKey && (
+                              <motion.ul
+                                className="accordion-content"
+                                initial={{ height: 0, opacity: 0 }}
+                                animate={{ height: "auto", opacity: 1 }}
+                                exit={{ height: 0, opacity: 0 }}
+                              >
+                                {servicesData[categoryKey].map((item, i) => (
+                                  <li key={i}>
+                                    <Link to={item.to}>{item.label}</Link>
+                                  </li>
+                                ))}
+                              </motion.ul>
+                            )}
+                          </AnimatePresence>
                         </div>
-                        <AnimatePresence>
-                          {openSubDropdown === "brain" && (
-                            <motion.ul
-                              className="accordion-content"
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: "auto", opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.25 }}
-                            >
-                              {servicesData.brain.map((item, i) => (
-                                <li key={i}><Link to={item.to}>{item.label}</Link></li>
-                              ))}
-                            </motion.ul>
-                          )}
-                        </AnimatePresence>
-                      </div>
+                      ))}
                     </div>
                   )}
+
                 </motion.div>
               )}
             </AnimatePresence>
           </li>
 
-          {/* 🏆 OTHER LINKS */}
-          <li><Link to="/achievements">Achievements</Link></li>
-
-          {/* 🌐 MEDIA DROPDOWN */}
-          <li
-            className={`dropdown ${openDropdown === "media" ? "open" : ""}`}
-          >
-            <span
-              className="dropdown-btn"
-              onClick={() => toggleDropdown("media")}
-            >
+          {/* MEDIA */}
+          {/* <li className={`dropdown ${openDropdown === "media" ? "open" : ""}`}>
+            <span className="dropdown-btn" onClick={() => toggleDropdown("media")}>
               Media <span className="arrow">▼</span>
             </span>
 
@@ -234,32 +170,30 @@ const Navbar = () => {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.25 }}
                 >
                   {mediaLinks.map((ml) => (
-                    <li key={ml.path}>
-                      <Link to={ml.path}>{ml.label}</Link>
-                    </li>
+                    <li key={ml.path}><Link to={ml.path}>{ml.label}</Link></li>
                   ))}
                 </motion.ul>
               )}
             </AnimatePresence>
-          </li>
+          </li> */}
 
+          {/* <li><Link to="/achievements">Achievements</Link></li> */}
           <li><Link to="/contact">Contact</Link></li>
-          <li><Link className="companylogin2" to="https://tms-pearl-zeta.vercel.app/dashboard">Company Login</Link></li>
+          <li>
+            <Link to="https://tms-pearl-zeta.vercel.app/dashboard">
+              Company Login
+            </Link>
+          </li>
         </ul>
 
-        {/* 💙 Appointment Button */}
-        <div className="appointment-button ">
-          <Button variant="primary" size="sm" href="/appointment" >
+        {/* APPOINTMENT BUTTON */}
+        <div className="appointment-button">
+          <Button variant="primary" size="sm" href="/appointment">
             Appointment
           </Button>
         </div>
-        {/* <LanguageToggle /> */}
-        <Button variant="primary companyLogin" size="sm" href="https://tms-pearl-zeta.vercel.app/dashboard">
-            Company Login
-          </Button>
       </div>
     </nav>
   );

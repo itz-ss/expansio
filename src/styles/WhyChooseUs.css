@@ -2,7 +2,7 @@
 .why-choose-us {
   /* background: linear-gradient(135deg, #1c8cfc, #eef2ff); */
   text-align: center;
-  background-color: #b1d9ef;
+  background-color: #f0e1e1;
 }
 
 /* 📊 Stats Container — GRID SYSTEM */
@@ -93,13 +93,18 @@
 /* Mobile: 1 card per row */
 /* Mobile: 2 cards per row (2 × 2 layout) */
 /* Very small mobile (2 cards but smaller) */
+/* Mobile: 2 cards per row */
 @media (max-width: 480px) {
   .stats-container {
+    display: grid !important;      /* Force grid instead of flex */
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    justify-items: center;
   }
 
   .stat-card {
+    max-width: 100%;
     padding: 1.2rem;
+    height: auto; /* Allow natural height for smaller screens */
   }
 }

@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { servicesData } from "../data/servicesData";
+import { servicesData } from "../data/servicesData.js";
 import "../styles/Footer.css";
 
 function Footer() {
@@ -10,25 +10,24 @@ function Footer() {
         <Row className="gy-4">
           {/* 🩺 Contact Info */}
           <Col md={4}>
-            <h5 className="fw-bold mb-3 text-uppercase">Contact Doctor</h5>
+            <h5 className="fw-bold mb-3 text-uppercase">Contact Expansio</h5>
             <p className="mb-2">
-              Neuron Brain & Spine Center, 2nd Floor, Suryodey Bank, Vibhuti Khand, <br />
-              Lucknow, Uttar Pradesh 226016
+             expansio,630/7, Shiv Behar, Faradi Nagar, Indra Nagar, lucknow, Uttar Pradesh, India, 226016
             </p>
             <p className="mb-2">
               <a
                 href="tel:+917080106535"
                 className="text-decoration-none text-dark fw-semibold"
               >
-                📞 +91 7080106535
+                📞 +91 9120277738 
               </a>
             </p>
             <p>
               <a
-                href="mailto:neurospine001@gmail.com"
+                href="mailto:expansio.marketing@gmail.com"
                 className="text-decoration-none text-dark fw-semibold"
               >
-                📧 neurospine001@gmail.com
+                📧  expansio.marketing@gmail.com
               </a>
             </p>
           </Col>
@@ -62,11 +61,11 @@ function Footer() {
           <Col md={3} className="footer-social">
             <div className="d-flex align-items-center gap-4 mb-4">
               <h5 className="fw-bold text-uppercase mb-0">Follow:</h5>
-              <div className="social-icons d-flex align-items-center gap-3">
-                {[
+              {/* <div className="social-icons d-flex align-items-center gap-3"> */}
+                {/* {[
                   ["facebook_3670271.png", "Facebook", "https://www.facebook.com/share/15zrv5HUWd/?mibextid=wwXIfr"],
                   ["instagram_2673885.png", "Instagram", "https://www.instagram.com/neuronbrainandspine?igsh=MXUxaHB2MDhmOTdwcw%3D%3D&utm_source=qr"],
-                  ["whatsapp_1384007.png", "WhatsApp", `https://wa.me/${6388060502}?text=${"Hello! I’d like to book an appointment."}`],
+                  ["whatsapp_1384007.png", "WhatsApp", `https://wa.me/${9120277738}?text=${"Hello! I’d like to book an appointment."}`],
                   ["youtube-symbol_49411.png", "YouTube", "https://youtube.com/@neuronbrainandspine?si=YEaUrakZh9HD3WjK"],
                 ].map(([img, alt, link], index) => (
                   <a
@@ -83,7 +82,7 @@ function Footer() {
                     />
                   </a>
                 ))}
-              </div>
+              </div> */}
             </div>
 
             {/* 🌍 Google Reviews & Location */}
@@ -94,7 +93,7 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/assets/images/googleR-removebg-preview.png"
+                  src="/assets/images/map.png"
                   alt="Google Reviews"
                   className="google-review-img"
                 />
@@ -121,7 +120,7 @@ function Footer() {
         <Row className="pt-3 mt-2 border-top position-relative">
           <Col className="text-center">
             <small className="text-muted">
-              © {new Date().getFullYear()} Dr. Achal Gupta | All Rights Reserved
+              © {new Date().getFullYear()} Expansio Marketing | All Rights Reserved
             </small>
 
             {/* ⭐ Bottom-Right Logo + Text */}

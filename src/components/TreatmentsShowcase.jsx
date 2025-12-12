@@ -7,22 +7,23 @@ import "../styles/TreatmentsShowcase.css";
 const TreatmentsShowcase = () => {
   const navigate = useNavigate();
 
-  // Combine all treatments into a single array
-  const allTreatments = [
-    ...servicesData.spine.map((t) => ({ ...t, category: "Dr. Achal Gupta" })),
-    ...servicesData.brain.map((t) => ({ ...t, category: "Dr. Konika Bansal" })),
-  ];
+  /* -------------------------------------------------------
+     ⭐ MERGE ALL SERVICES DYNAMICALLY FROM JSON
+     No hardcoding. Automatically adapts to added categories.
+  -------------------------------------------------------- */
+  const allTreatments = Object.values(servicesData)
+    .flat()
+    .map((t) => ({ ...t }));
 
   /* ----------------------------------------
      🟦 SHOW-MORE TOGGLE LOGIC
-     showCount = how many items to display
   ----------------------------------------- */
   const [showAll, setShowAll] = useState(false);
   const itemsToShow = showAll ? allTreatments.length : 10;
 
   return (
     <section className="treatments-showcase">
-      {/* Floating background particles */}
+      {/* Floating BG particles */}
       <div className="particle-bg">
         {[...Array(25)].map((_, i) => (
           <span key={i} className="particle"></span>
@@ -46,10 +47,11 @@ const TreatmentsShowcase = () => {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
         >
-         Choose specialized services that will skyrocket your brand and sales graph.
+          Choose specialized services that will skyrocket your brand and sales
+          growth.
         </motion.p>
 
-        {/* 🟦 GRID WITH SHOW MORE/LESS */}
+        {/* 🟦 GRID OF TREATMENTS */}
         <div className="treatments-grid">
           <AnimatePresence>
             {allTreatments.slice(0, itemsToShow).map((treatment, i) => (
@@ -80,10 +82,13 @@ const TreatmentsShowcase = () => {
           </AnimatePresence>
         </div>
 
-        {/* 🟩 SHOW MORE / SHOW LESS BUTTON */}
+        {/* 🟩 SHOW MORE / LESS */}
         {allTreatments.length > 10 && (
           <div className="show-more-wrapper">
-            <button className="show-more-btn" onClick={() => setShowAll(!showAll)}>
+            <button
+              className="show-more-btn"
+              onClick={() => setShowAll(!showAll)}
+            >
               {showAll ? "Show Less" : "Show More"}
             </button>
           </div>

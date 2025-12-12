@@ -1,63 +1,134 @@
 /* ================================
-   🖼 MAIN BANNER IMAGE STYLING
-   ================================ */
+   BANNER WRAPPER (POSITIONING)
+================================ */
+.banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-/* Ensures the banner scales perfectly to any screen size */
-
+/* ================================
+   MAIN BANNER IMAGE
+================================ */
 .main-banner {
-  width: 100%;                 /* Make banner stretch to full container width */
-  height: auto;                /* Keep original image ratio */
-  max-height: 80vh;            /* Prevents banner from being too tall on big screens */
-  object-fit: cover;           /* Crops edges gracefully if needed */
-  border-radius: 12px;         /* Slightly rounded corners for a modern look */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth hover animation */
-  background-color: transparent;
-}
-
-/* Adds a subtle zoom on hover for interactivity */
-.main-banner:hover {
-  transform: scale(1.02);        /* Slight zoom-in effect */
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 40vh;
+  display: block;
+  border-radius: 12px;
+  object-fit: cover;
 }
 
 /* ================================
-   📱 RESPONSIVENESS SETTINGS
-   ================================ */
+   TEXT OVER THE BANNER
+================================ */
+.banner-text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  text-align: center;
+  color: #ffffff;
 
-/* Medium screens (tablets, small laptops) */
-@media (max-width: 992px) {
-  .main-banner {
-    max-height: 60vh;           /* Adjusts height for smaller displays */
-    border-radius: 10px;
-  }
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+  padding: 20px 35px;
+  border-radius: 12px;
+  max-width: 80%;
 }
 
-/* Small screens (phones) */
-@media (max-width: 576px) {
-  .main-banner {
-    max-height: 45vh;           /* Keeps banner compact on mobile */
-    border-radius: 8px;
-    box-shadow: none;           /* Removes heavy shadow for clean mobile layout */
+/* Desktop Text */
+.banner-text-overlay h1 {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.banner-text-overlay p {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  text-align: center;
+}
+
+/* ================================
+   TABLET RESPONSIVE
+   (768px to 1024px)
+================================ */
+@media (max-width: 1024px) {
+  .banner-text-overlay {
+    padding: 16px 30px;
+    max-width: 90%;
+  }
+
+  .banner-text-overlay h1 {
+    font-size: 34px;
+  }
+
+  .banner-text-overlay p {
+    font-size: 18px;
   }
 }
 
 /* ================================
-   🎨 OPTIONAL: SECTION STYLING
-   ================================ */
+   MOBILE RESPONSIVE
+   (500px to 767px)
+================================ */
+@media (max-width: 767px) {
+  .banner-text-overlay {
+    padding: 14px 22px;
+    max-width: 95%;
+  }
 
-/* Adds gentle spacing and clean background for the hero section */
-.hero {
-  /* background: linear-gradient(to bottom, #f9fcff, #ffffff);  */
-  /* Soft white gradient */
-  padding-top: 1rem;            /* Top space for header */
-  padding-bottom: 1rem;         /* Bottom space for next section */
+  .banner-text-overlay h1 {
+    font-size: 26px;
+  }
+
+  .banner-text-overlay p {
+    font-size: 15px;
+  }
+  .main-banner{
+    height: 30vh;
+  }
 }
 
-/* Centers everything nicely in the hero container */
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* ================================
+   SMALL PHONE RESPONSIVE
+   (below 500px)
+================================ */
+@media (max-width: 500px) {
+  .banner-text-overlay {
+    padding: 10px 16px;
+  }
+
+  .banner-text-overlay h1 {
+    font-size: 22px;
+  }
+
+  .banner-text-overlay p {
+    font-size: 14px;
+  }
+  .main-banner{
+    height: 25vh;
+  }
+}
+
+/* ================================
+   ULTRA SMALL PHONES
+   (below 380px)
+================================ */
+@media (max-width: 380px) {
+  .banner-text-overlay h1 {
+    font-size: 18px;
+  }
+
+  .banner-text-overlay p {
+    font-size: 12px;
+  }
+  .main-banner{
+    height: 20vh;
+  }
 }

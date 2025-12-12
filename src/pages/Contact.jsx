@@ -92,7 +92,7 @@ function Contact() {
                   <i className="bi bi-envelope-fill text-primary"></i> Email
                 </h5>
                 <a
-                  href="mailto:neurospine001@gmail.com"
+                  href="mailto:expansio.marketing@gmail.com"
                   className="contact-link"
                 >
                   expansio.marketing@gmail.com

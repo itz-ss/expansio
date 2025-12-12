@@ -22,10 +22,10 @@
    ========================================================= */
 :root {
   --primary-color: #0a5ffb;
-  --primary-dark: #f5f5f5;
-  --text-color: #ffffff;
-  --heading-color: #f36a6a;
-  --background-color: #000000;
+  --primary-dark: #00165b;
+  --text-color: #2d2d2d;
+  --heading-color: #020e35;
+  --background-color: rgb(255, 255, 255); 
   --secondary-color: #0A5FFB;
 
   --space-1: 8px;

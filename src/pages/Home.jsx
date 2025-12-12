@@ -28,24 +28,33 @@ function Home() {
 
 
       <SchemaDoctor />
+<section className="hero text-center py-2">
+  <Container className="banner-wrapper">
+      
+      {/* Banner Image */}
+      <img
+        className="main-banner"
+        src="/assets/banner/herobanner.jpg"
+        alt="Main banner showing the doctor and clinic theme"
+      />
 
-      <section className="hero text-center py-2">
-        <Container>
-          <img
-            className="main-banner"
-            src="/assets/banner/homePageBanner.png"
-            alt="Main banner showing the doctor and clinic theme"
-          />
-        </Container>
-      </section>
+      {/* ⭐ YOUR TEXT OVER THE BANNER */}
+      <div className="banner-text-overlay">
+        <h1>Your Business. Your Growth. Your Empire.</h1>
+        <p>Expansio Builds Brands That Customers Never Forget.</p>
+      </div>
+
+  </Container>
+</section>
+
 
       {/* 🌟 Content Sections */}
       <WelcomeSection />
       <TreatmentsShowcase />
       <TechnologySection />
-      <KnowledgePartners />
+      {/* <KnowledgePartners /> */}
       <Testimonials />
-      <YouTubeVideos videos={videoLinks} />
+      {/* <YouTubeVideos videos={videoLinks} /> */}
       <WhyChooseUs />
       <FAQ />
     </>

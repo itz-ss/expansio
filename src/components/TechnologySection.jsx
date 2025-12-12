@@ -75,7 +75,7 @@ function TechnologySection() {
           viewport={{ once: true }}
         >
           <img
-            src="/assets/images/technology.jpg"
+            src="/assets/images/tech.png"
             alt="Advanced Spine Technology"
             className="tech-image"
           />

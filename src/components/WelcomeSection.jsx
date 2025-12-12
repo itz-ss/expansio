@@ -43,13 +43,13 @@ const WelcomeSection = () => {
               >
                 {/* 🖼 Large Image with hover zoom */}
                 <motion.img
-                  src="/assets/welcomePage/achal1.png"
+                  src="/assets/welcomePage/one.png"
                   alt="Dr. Achal Gupta"
                   className="grid-image main-img"
                   variants={fadeIn("up", 0.1)}
                   whileHover={{
                     scale: 1.15,
-                    boxShadow: "0 12px 28px rgba(0, 0, 0, 0.25)",
+                    boxShadow: "20px 20px 28px rgba(0, 0, 0, 0.4)",
                   }}
                   transition={{ duration: 0.4, ease: "easeOut" }}
                 />
@@ -57,24 +57,24 @@ const WelcomeSection = () => {
                 {/* 🖼 Two Smaller Images */}
                 <div className="small-img-row">
                   <motion.img
-                    src="/assets/welcomePage/achal2.JPG"
+                    src="/assets/welcomePage/two.png"
                     alt="Spine Procedure"
                     className="grid-image small-img"
                     variants={fadeIn("up", 0.2)}
                     whileHover={{
                       scale: 1.1,
-                      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+                      boxShadow: "20px 20px 28px rgba(0, 0, 0, 0.2)",
                     }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   />
                   <motion.img
-                    src="/assets/welcomePage/achal3.JPG"
+                    src="/assets/welcomePage/three.png"
                     alt="Operation Room"
                     className="grid-image small-img"
                     variants={fadeIn("up", 0.3)}
                     whileHover={{
                       scale: 1.1,
-                      boxShadow: "0 10px 25px rgba(0, 0, 0, 0.2)",
+                      boxShadow: "20px 20px 28px rgba(0, 0, 0, 0.2)",
                     }}
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   />
@@ -133,7 +133,7 @@ const WelcomeSection = () => {
                 viewport={{ once: true, amount: 0.2 }}
               >
                 <motion.img
-                  src="/assets/welcomePage/konika.jpg"
+                  src="/assets/welcomePage/five.png"
                   alt="Dr. Konika Bansal"
                   className="grid-image main-img"
                   variants={fadeIn("up", 0.1)}
@@ -146,7 +146,7 @@ const WelcomeSection = () => {
 
                 <div className="small-img-row">
                   <motion.img
-                    src="/assets/welcomePage/konika2.jpg"
+                    src="/assets/welcomePage/four.png"
                     alt="Neurology Lab"
                     className="grid-image small-img"
                     variants={fadeIn("up", 0.2)}
@@ -157,7 +157,7 @@ const WelcomeSection = () => {
                     transition={{ duration: 0.3, ease: "easeOut" }}
                   />
                   <motion.img
-                    src="/assets/welcomePage/konika3.jpg"
+                    src="/assets/welcomePage/six.png"
                     alt="Patient Care"
                     className="grid-image small-img"
                     variants={fadeIn("up", 0.3)}
