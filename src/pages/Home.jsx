@@ -34,7 +34,7 @@ function Home() {
       {/* Banner Image */}
       <img
         className="main-banner"
-        src="/assets/banner/herobanner.jpg"
+        src="/assets/banner/heroBanner.jpg"
         alt="Main banner showing the doctor and clinic theme"
       />
 
