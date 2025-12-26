@@ -31,10 +31,10 @@ const ServicePage = () => {
   return (
     <>
       <SEO
-        title={`Service | ${service.label}`}
+        title={`${service.label} | Expansio | Build, Scale & Launch Digital Products`}
         description={service.description.substring(0, 155)}
-        keywords={service.label}
-        image={service.banner}
+        keywords={`Expansio, ${service.label}`}
+        image={service.banner || "/assets/ExpansioLogo.png"}
       />
     <div className="service-page">
       {/* =================== BANNER =================== */}

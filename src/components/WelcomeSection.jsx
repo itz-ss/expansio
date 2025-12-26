@@ -23,9 +23,9 @@ const WelcomeSection = () => {
   return (
     <>
       <SEO
-        title="Neuron Brain & Spine Centre | Dr. Achal Gupta & Dr. Konika Bansal"
-        description="Meet Dr. Achal Gupta and Dr. Konika Bansal, experts at Neuron Brain & Spine Centre specializing in advanced brain, spine, and neuro-related treatments."
-        keywords="Dr Achal Gupta, Dr Konika Bansal, spine surgeon Siliguri, brain surgeon North Bengal, endoscopic spine surgery, neuro specialist"
+        title="Expansio | Build, Scale & Launch Digital Products"
+        description="Expansio helps businesses build high-performing websites, scalable apps, and growth-driven brands that capture market share."
+        keywords="Expansio, digital agency, web development, branding, growth marketing"
       />
 
       {/* 🌐 Section 1 – Dr. Achal Gupta */}

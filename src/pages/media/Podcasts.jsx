@@ -209,10 +209,10 @@ const Podcasts = () => {
   return (
     <>
     <SEO
-      title="Events | Neuron Brain & Spine Center | Medical Awareness & Public Education"
-      description="Stay updated with events and medical awareness activities from Neuron Brain & Spine Center led by Dr Achal Gupta and Dr Konika Bansal including camps, awareness programs and conferences."
-      keywords="neurosurgery events, medical events, pediatric neurology events, health awareness events, neuron brain and spine center events"
-      image="/assets/banner/homePageBanner.png"
+      title="Podcasts | Expansio"
+      description="Listen to Expansio's podcasts about product, growth, design, and startup stories with industry guests."
+      keywords="Expansio podcasts, product podcasts, growth marketing podcasts, startup interviews"
+      image="/assets/ExpansioLogo.png"
     />
 
     <div className="media-page">

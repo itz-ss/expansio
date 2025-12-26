@@ -40,10 +40,10 @@ function AchalAbout() {
   return (
     <>
     <SEO
-      title="Dr Achal Gupta | Consultant Neurosurgeon & Spine Surgeon in Lucknow"
-      description="Learn about Dr Achal Gupta, Consultant Neurosurgeon & Spine Surgeon at Neuron Brain & Spine Center, Lucknow specializing in minimally invasive and endoscopic spine surgery."
-      keywords="Dr Achal Gupta, Neurosurgeon in Lucknow, Spine Surgeon Lucknow, Minimally Invasive Spine Surgery, Endoscopic Spine Surgery, Brain Tumor Surgery"
-      image="/assets/about/achal6.jpg"
+      title={`${doctor.name} | Team — Expansio`}
+      description={`${doctor.title} — Learn more about ${doctor.name} and their role at Expansio.`}
+      keywords={`Expansio team, ${doctor.name}, ${doctor.title}`}
+      image={getImage(0)}
     />
 
     <Container className="about-container">

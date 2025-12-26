@@ -3,19 +3,21 @@ import { Helmet } from "react-helmet-async";
 import { useLocation } from "react-router-dom";
 
 function SEO({
-  title = "Neuron Brain & Spine Center, Lucknow",
-  description = "Neuron Brain and Spine Center offers advanced neurosurgery, spine surgery, pediatric neurology and minimally invasive treatments.",
-  keywords = "neurosurgery, spine surgery, pediatric neurology, brain surgery, spine specialist, Lucknow",
-  image = "/assets/images/og-image.jpg",
+  title = "Expansio | Build, Scale & Launch Digital Products",
+  description = "Expansio is a modern digital solutions company delivering high-performance websites, scalable applications, branding, and growth-focused technology solutions.",
+  keywords = "Expansio, digital agency, web development, product design, SaaS development, startup solutions, branding, full stack development",
+  image = "/assets/ExpansioLogo.png",
   type = "website",
-  twitterUsername = "@neuronbrainandspine"
+  twitterUsername = ""
 }) {
 
   const location = useLocation();
   
-  const siteUrl = "https://neuronbrainandspine.in"; // <<< CHANGE to your domain
+  const siteUrl = "https://expansio.in"; // site domain for canonical and absolute assets
 
   const canonicalUrl = `${siteUrl}${location.pathname}`;
+
+  const ogImage = image && image.startsWith("http") ? image : `${siteUrl}${image}`;  // absolute OG image URL
 
 
   return (
@@ -38,19 +40,43 @@ function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={ogImage} />
       <meta property="og:image:alt" content={title} />
-      <meta property="og:locale" content="en_IN" />
+      <meta property="og:locale" content="en_US" />
 
       {/* Twitter */}
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={ogImage} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content={twitterUsername} />
 
       {/* Prevent duplicate tags */}
-      <meta name="application-name" content="Neuron Brain & Spine Center" />
+      <meta name="application-name" content="Expansio" />
+
+      {/* Structured Data (JSON-LD) */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "name": "Expansio",
+              "url": siteUrl,
+              "logo": `${siteUrl}/assets/ExpansioLogo.png`
+            },
+            {
+              "@type": "WebSite",
+              "url": siteUrl,
+              "name": title,
+              "publisher": {
+                "@type": "Organization",
+                "name": "Expansio"
+              }
+            }
+          ]
+        })}
+      </script>
     </Helmet>
   );
 }

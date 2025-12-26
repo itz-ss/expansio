@@ -14,10 +14,10 @@ function Achievements() {
   return (
     <>
      <SEO
-      title="Achievements | Dr Achal Gupta & Dr Konika Bansal | Neuron Brain & Spine Center"
-      description="Explore major achievements of Dr Achal Gupta, Consultant Neurosurgeon & Spine Surgeon, and Dr Konika Bansal, Consultant Pediatric Neurologist at Neuron Brain & Spine Center, Lucknow."
-      keywords="Dr Achal Gupta achievements, Dr Konika Bansal achievements, Neurosurgeon Lucknow, Spine surgeon achievements, Pediatric Neurologist achievements, Neuron Brain and Spine Center"
-      image="/assets/banner/homePageBanner.png"
+      title="Work & Case Studies | Expansio"
+      description="Explore Expansio's achievements and case studies showcasing web, product, and brand work that helped clients scale."
+      keywords="Expansio case studies, Expansio achievements, web development case studies, digital agency work"
+      image="/assets/ExpansioLogo.png"
     />
 
 

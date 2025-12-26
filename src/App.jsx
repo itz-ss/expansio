@@ -8,10 +8,10 @@ function App() {
   return (
     <Router basename="/">
       <SEO
-        title="Neuron Brain & Spine Center | Neurosurgeon, Spine Surgeon & Pediatric Neurologist"
-        description="Neuron Brain & Spine Center in Lucknow provides advanced neurosurgery, spine surgery and pediatric neurology care by Dr Achal Gupta and Dr Konika Bansal."
-        keywords="Neuron Brain and Spine Center, Neurosurgeon Lucknow, Spine Surgeon Lucknow, Pediatric Neurologist Lucknow"
-        image="/assets/banner/homePageBanner.png"
+        title="Expansio | Build, Scale & Launch Digital Products"
+        description="Expansio is a modern digital solutions company helping startups and businesses design, build, and scale high-performance websites, applications, and brands."
+        keywords="Expansio, digital agency, web development, SaaS development, startup solutions, UI UX design, branding, full stack development"
+        image="/assets/ExpansioLogo.png"
       />
       <ScrollToTop />
       <AppRoutes />

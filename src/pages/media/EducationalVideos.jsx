@@ -107,10 +107,10 @@ const EducationalVideos = () => {
   return (
     <>
     <SEO
-      title="Educational Neurosurgery & Pediatric Neurology Videos | Neuron Brain & Spine Center"
-      description="Watch educational videos by Dr Achal Gupta and Dr Konika Bansal on neurosurgery, spine surgery, pediatric neurology, epilepsy, autism, ADHD, and advanced brain and spine treatments."
-      keywords="medical educational videos, neurosurgery videos, spine surgery videos, pediatric neurology videos, epilepsy education, brain and spine videos"
-      image="/assets/banner/homePageBanner.png"
+      title="Videos | Expansio — Educational & Product Content"
+      description="Watch educational and product-focused videos from Expansio covering design, development, and marketing strategies."
+      keywords="Expansio videos, product videos, educational videos, design tutorials"
+      image="/assets/ExpansioLogo.png"
     />
 
     <div className="media-page">

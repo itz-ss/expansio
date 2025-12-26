@@ -177,10 +177,10 @@ const TestimonialsPage = () => {
   return (
     <>
     <SEO
-      title="Patient Testimonials | Neuron Brain & Spine Center Lucknow"
-      description="Read real patient reviews and success stories about treatments by Dr Achal Gupta and Dr Konika Bansal at Neuron Brain & Spine Center specializing in neurosurgery, spine surgery and pediatric neurology."
-      keywords="neurosurgeon testimonials, pediatric neurologist reviews, spine surgery testimonials, neuron brain and spine center reviews"
-      image="/assets/images/og-image.jpg"
+      title="Testimonials | Expansio"
+      description="Read client testimonials and success stories highlighting the outcomes Expansio achieved in web, product, and brand growth."
+      keywords="Expansio testimonials, client reviews, success stories"
+      image="/assets/ExpansioLogo.png"
     />
 
     <div className="media-page">

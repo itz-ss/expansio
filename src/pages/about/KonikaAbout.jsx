@@ -56,10 +56,10 @@ function KonikaAbout() {
     <>
       {/* SEO */}
       <SEO
-        title="Dr Konika Bansal | Pediatric Neurologist in Lucknow"
-        description="Meet Dr Konika Bansal, Consultant Pediatric Neurologist specializing in epilepsy, developmental disorders, autism and pediatric neuromuscular disorders at Neuron Brain & Spine Center Lucknow."
-        keywords="Dr Konika Bansal, Pediatric Neurologist Lucknow, Epilepsy Doctor, Autism specialist, ADHD treatment, Child neurologist Lucknow"
-        image="/assets/about/konika12.jpeg"
+        title={`${doctor.name} | Team — Expansio`}
+        description={`${doctor.title} — Learn more about ${doctor.name} and their role at Expansio.`}
+        keywords={`Expansio team, ${doctor.name}, ${doctor.title}`}
+        image={sectionImages[0] || "/assets/ExpansioLogo.png"}
       />
 
 

@@ -20,10 +20,10 @@ function Home() {
   return (
     <>
       <SEO
-        title="Neuron Brain & Spine Center | Neurosurgeon, Spine Surgeon & Pediatric Neurologist in Lucknow"
-        description="Neuron Brain & Spine Center in Lucknow offers advanced neurosurgery, spine surgery and pediatric neurology care by Dr Achal Gupta and Dr Konika Bansal using modern minimally invasive treatment approaches."
-        keywords="Neuron Brain and Spine Center, Neurosurgeon Lucknow, Spine Surgeon Lucknow, Pediatric Neurologist Lucknow, minimally invasive spine surgery, neurosurgery Lucknow"
-        image="/assets/images/og-image.jpg"
+        title="Expansio | Build, Scale & Launch Digital Products"
+        description="Expansio builds and scales high-performance websites, web and mobile apps, and brands that help startups and businesses grow."
+        keywords="Expansio, digital agency, web development, product design, branding, growth marketing"
+        image="/assets/ExpansioLogo.png"
       />
 
 

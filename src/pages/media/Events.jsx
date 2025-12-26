@@ -209,10 +209,10 @@ const Events = () => {
   return (
     <>
     <SEO
-      title="Events | Neuron Brain & Spine Center | Medical Awareness & Public Education"
-      description="Stay updated with events and medical awareness activities from Neuron Brain & Spine Center led by Dr Achal Gupta and Dr Konika Bansal including camps, awareness programs and conferences."
-      keywords="neurosurgery events, medical events, pediatric neurology events, health awareness events, neuron brain and spine center events"
-      image="/assets/banner/homePageBanner.png"
+      title="Events & Workshops | Expansio"
+      description="Stay updated with Expansio events, workshops, webinars, and knowledge sessions focused on product, design, and growth."
+      keywords="Expansio events, workshops, webinars, product workshops, design events"
+      image="/assets/ExpansioLogo.png"
     />
 
     <div className="media-page">

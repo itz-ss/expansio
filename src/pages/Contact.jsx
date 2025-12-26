@@ -9,10 +9,10 @@ function Contact() {
   return (
     <>
       <SEO
-        title="Contact Neuron Brain & Spine Center | Dr Achal Gupta & Dr Konika Bansal"
-        description="Contact Neuron Brain & Spine Center, Lucknow to book an appointment with Dr Achal Gupta, Consultant Neurosurgeon & Spine Surgeon, or Dr Konika Bansal, Consultant Pediatric Neurologist."
-        keywords="Contact Neuron Brain and Spine Center, Contact Dr Achal Gupta, Contact Dr Konika Bansal, Neurosurgeon Lucknow contact, Pediatric Neurologist Lucknow contact, spine surgeon appointment"
-        image="/assets/banner/homePageBanner.png"
+        title="Contact | Expansio — Build, Scale & Launch Digital Products"
+        description="Contact Expansio to get a proposal for websites, apps, branding, and growth-focused technology solutions. Book a consultation or request a quote."
+        keywords="Contact Expansio, web development contact, branding contact, digital agency contact"
+        image="/assets/ExpansioLogo.png"
       />
 
 
